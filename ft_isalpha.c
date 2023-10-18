@@ -1,8 +1,22 @@
-int ft_isalpha(int charac)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ahans <allan.hans68350@gmail.com>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/18 11:02:03 by ahans             #+#    #+#             */
+/*   Updated: 2023/10/18 16:47:25 by ahans            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+int	ft_isalpha(int charac)
 {
-	if((charac < 41 || charac > 122) || (charac > 90 && charac < 97))
+	if ((charac < 41 || charac > 122) || (charac > 90 && charac < 97))
 	{
-		return 0;
+		return (0);
 	}
-	return 1;
+	return (1);
 }

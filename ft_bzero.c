@@ -1,14 +1,26 @@
-#include <strings.h>
-void ft_bzero(void *s, size_t n)
-{
-	char * str;
-	str = s;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ahans <allan.hans68350@gmail.com>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/18 11:01:41 by ahans             #+#    #+#             */
+/*   Updated: 2023/10/18 16:41:51 by ahans            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-	while(n)
+#include "libft.h"
+
+void	ft_bzero(void *s, size_t n)
+{
+	char	*str;
+
+	str = s;
+	while (n--)
 	{
 		*str = 0;
 		str++;
-		n--;
 	}
 	return ;
 }

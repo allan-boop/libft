@@ -1,13 +1,25 @@
-#include <stdio.h>
-#include <string.h>
-#include <stddef.h> 
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ahans <allan.hans68350@gmail.com>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/18 11:03:16 by ahans             #+#    #+#             */
+/*   Updated: 2023/10/18 17:08:48 by ahans            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-size_t ft_strlen(const char * theString)
+#include "libft.h"
+
+size_t	ft_strlen(const char *theString)
 {
-	unsigned int i = 0;
+	unsigned int	i;
+
+	i = 0;
 	while (theString[i] != '\0')
 	{
 		i++;
 	}
-	return i;
+	return (i);
 }
