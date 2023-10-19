@@ -20,7 +20,11 @@ SRC_FILES	= main.c \
 			ft_memset.c \
 			ft_strlen.c \
 			ft_strlcpy.c \
-			ft_strlcat.c
+			ft_strlcat.c \
+			ft_toupper.c \
+			ft_tolower.c \
+			ft_strchr.c \
+			ft_strrchr.c
 
 OBJ_FILES = $(SRC_FILES:.c=.o)
 

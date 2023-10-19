@@ -6,7 +6,7 @@
 /*   By: ahans <allan.hans68350@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 11:03:16 by ahans             #+#    #+#             */
-/*   Updated: 2023/10/18 17:08:48 by ahans            ###   ########.fr       */
+/*   Updated: 2023/10/19 11:25:04 by ahans            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlen(const char *theString)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
 	while (theString[i] != '\0')

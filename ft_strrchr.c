@@ -1,42 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahans <allan.hans68350@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/18 11:02:48 by ahans             #+#    #+#             */
-/*   Updated: 2023/10/19 11:11:28 by ahans            ###   ########.fr       */
+/*   Created: 2023/10/19 10:31:09 by ahans             #+#    #+#             */
+/*   Updated: 2023/10/19 11:45:52 by ahans            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *destination, const void *source, size_t size)
+char	*ft_strrchr(const char *string, int searchedChar)
 {
-	char		*dest;
-	const char	*src;
-	size_t		i;
+	long long	i;
 
-	dest = (char *)destination;
-	src = (char *)source;
-	i = 0;
-	if (dest > src)
+	i = ft_strlen(string) - 1;
+	while (i >= 0)
 	{
-		while (i < size)
-		{
-			dest[size] = src[size];
-			i++;
-		}
-		i = 0;
+		if (string[i] == (char)searchedChar)
+			return ((char *)(string + i));
+		i--;
 	}
-	else
-	{
-		while (size--)
-		{
-			dest[i] = src[i];
-			i++;
-		}
-	}
-	return (destination);
+	return (NULL);
 }
