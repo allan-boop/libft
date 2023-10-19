@@ -6,7 +6,7 @@
 /*   By: ahans <allan.hans68350@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 10:23:44 by ahans             #+#    #+#             */
-/*   Updated: 2023/10/19 11:13:11 by ahans            ###   ########.fr       */
+/*   Updated: 2023/10/19 17:51:02 by ahans            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,7 @@ char	*ft_strchr(const char *string, int searchedChar)
 			return ((char *)string);
 		string++;
 	}
+	if (searchedChar == '\0')
+		return ((char *)string);
 	return (NULL);
 }

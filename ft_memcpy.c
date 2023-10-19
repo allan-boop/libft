@@ -6,7 +6,7 @@
 /*   By: ahans <allan.hans68350@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 11:02:43 by ahans             #+#    #+#             */
-/*   Updated: 2023/10/18 16:58:16 by ahans            ###   ########.fr       */
+/*   Updated: 2023/10/19 18:18:30 by ahans            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,10 @@ void	*ft_memcpy(void *destination, const void *source, size_t size)
 {
 	char		*dest;
 	const char	*src;
-	int			i;
+	size_t		i;
 
+	if (destination == NULL && source == NULL)
+		return (NULL);
 	dest = (char *)destination;
 	src = (const char *)source;
 	i = 0;

@@ -1,7 +1,7 @@
 #########################################
 ## ARGUMENTS
 
-NAME		= allan
+NAME		= libft.a
 CFLAGS		= -Wextra -Wall -Werror -c 
 CC			= gcc
 
@@ -24,7 +24,8 @@ SRC_FILES	= main.c \
 			ft_toupper.c \
 			ft_tolower.c \
 			ft_strchr.c \
-			ft_strrchr.c
+			ft_strrchr.c \
+			ft_strncmp.c
 
 OBJ_FILES = $(SRC_FILES:.c=.o)
 

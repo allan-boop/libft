@@ -6,7 +6,7 @@
 /*   By: ahans <allan.hans68350@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 11:01:18 by ahans             #+#    #+#             */
-/*   Updated: 2023/10/18 18:01:28 by ahans            ###   ########.fr       */
+/*   Updated: 2023/10/19 17:12:22 by ahans            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,10 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	size_t	src_len;
 
 	src_len = 0;
+	if (size == 0)
+	{
+		return (strlen(src));
+	}
 	while (src_len < size - 1 && src[src_len] != '\0')
 	{
 		dst[src_len] = src[src_len];
