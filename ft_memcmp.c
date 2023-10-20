@@ -1,33 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahans <allan.hans68350@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/19 14:19:13 by ahans             #+#    #+#             */
-/*   Updated: 2023/10/20 14:54:42 by ahans            ###   ########.fr       */
+/*   Created: 2023/10/20 14:57:08 by ahans             #+#    #+#             */
+/*   Updated: 2023/10/20 16:24:30 by ahans            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *memoryBlock, int searchedChar, size_t size)
+int	ft_memcmp(const void *pointer1, const void *pointer2, size_t size)
 {
-	const unsigned char	*src;
-	unsigned char		target;
+	const unsigned char	*p1;
+	const unsigned char	*p2;
 	size_t				i;
 
+	p1 = pointer1;
+	p2 = pointer2;
 	i = 0;
-	src = memoryBlock;
-	target = (unsigned char)searchedChar;
 	while (i < size)
 	{
-		if (src[i] == target)
-		{
-			return ((void *)&src[i]);
-		}
+		if (p1[i] != p2[i])
+			return (p1[i] - p2[i]);
 		i++;
 	}
-	return (NULL);
+	return (0);
 }
