@@ -6,7 +6,7 @@
 /*   By: ahans <allan.hans68350@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 10:31:09 by ahans             #+#    #+#             */
-/*   Updated: 2023/10/19 17:59:06 by ahans            ###   ########.fr       */
+/*   Updated: 2023/10/20 13:12:09 by ahans            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,16 @@
 
 char	*ft_strrchr(const char *string, int searchedChar)
 {
-	long long	i;
+	const char	*derniere_occurrence;
 
-	i = ft_strlen(string);
-	if (searchedChar == '\0') {
-        return (char *)(string + i); // Return a pointer to the null-terminator
-    }
-	i--;
-	while (i >= 0)
+	derniere_occurrence = NULL;
+	while (*string != '\0')
 	{
-		if (string[i] == (char)searchedChar)
-			return ((char *)(string + i));
-		i--;
+		if (*string == (char)searchedChar)
+			derniere_occurrence = (char *)string;
+		string++;
 	}
-	return (NULL);
+	if ((char)searchedChar == '\0')
+		return ((char *)string);
+	return ((char *)derniere_occurrence);
 }

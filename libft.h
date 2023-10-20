@@ -6,7 +6,7 @@
 /*   By: ahans <allan.hans68350@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 17:09:43 by ahans             #+#    #+#             */
-/*   Updated: 2023/10/19 13:47:44 by ahans            ###   ########.fr       */
+/*   Updated: 2023/10/20 14:09:39 by ahans            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <string.h>
 # include <stddef.h> 
 
+void 	*ft_memchr( const void *memoryBlock, int searchedChar, size_t size );
 int		ft_strncmp(const char *first, const char *second, size_t length);
 char	*ft_strrchr(const char *string, int searchedChar);
 char	*ft_strchr(const char *string, int searchedChar);

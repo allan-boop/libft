@@ -6,7 +6,7 @@
 /*   By: ahans <allan.hans68350@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 11:02:03 by ahans             #+#    #+#             */
-/*   Updated: 2023/10/18 16:47:25 by ahans            ###   ########.fr       */
+/*   Updated: 2023/10/20 10:08:01 by ahans            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_isalpha(int charac)
 {
-	if ((charac < 41 || charac > 122) || (charac > 90 && charac < 97))
+	if ((charac >= 'A' && charac <= 'Z') || (charac >= 'a' && charac <= 'z'))
 	{
-		return (0);
+		return (charac);
 	}
-	return (1);
+	return (0);
 }

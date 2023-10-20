@@ -8,7 +8,7 @@ CC			= gcc
 ########################################
 ## SOURCES
 
-SRC_FILES	= main.c \
+SRC_FILES	= ft_memchr.c \
 			ft_bzero.c \
 			ft_isalnum.c \
 			ft_isalpha.c \
@@ -35,7 +35,7 @@ OBJ_FILES = $(SRC_FILES:.c=.o)
 all: ${NAME}
 
 ${NAME}: ${OBJ_FILES}
-			${CC} ${OBJ_FILES} -o ${NAME}
+			${AR} rcs ${NAME} ${OBJ_FILES}
 %.o: %.c
 		${CC} ${CFLAGS} -c $< -o $@
 clean: 

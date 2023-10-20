@@ -6,7 +6,7 @@
 /*   By: ahans <allan.hans68350@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 13:46:58 by ahans             #+#    #+#             */
-/*   Updated: 2023/10/19 14:16:46 by ahans            ###   ########.fr       */
+/*   Updated: 2023/10/20 11:12:36 by ahans            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@ int	ft_strncmp(const char *first, const char *second, size_t length)
 	i = 0;
 	while (i < length && *first != '\0' && *second != '\0')
 	{
-		if (*first != *second)
-			return (*first - *second);
+		if ((unsigned char)*first != (unsigned char)*second)
+			return ((unsigned char)*first - (unsigned char)*second);
 		second++;
 		first++;
 		i++;
 	}
 	if (i == length)
 		return (0);
-	return (*first - *second);
+	return ((unsigned char)*first - (unsigned char)*second);
 }
