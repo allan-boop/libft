@@ -8,7 +8,11 @@ CC			= gcc
 ########################################
 ## SOURCES
 
-SRC_FILES	= ft_strnstr.c \
+SRC_FILES = ft_substr.c \
+			ft_strdup.c \
+			ft_calloc.c \
+			ft_atoi.c \
+			ft_strnstr.c \
 			ft_memcmp.c \
 			ft_memchr.c \
 			ft_bzero.c \
@@ -29,7 +33,11 @@ SRC_FILES	= ft_strnstr.c \
 			ft_strrchr.c \
 			ft_strncmp.c
 
-OBJ_FILES = ft_strnstr.o \
+OBJ_FILES = ft_substr.o \
+			ft_strdup.o \
+			ft_calloc.o \
+			ft_atoi.o \
+			ft_strnstr.o \
 			ft_memcmp.o \
 			ft_memchr.o \
 			ft_bzero.o \
@@ -58,9 +66,9 @@ all: ${NAME}
 ${NAME}: ${OBJ_FILES}
 			${AR} rcs ${NAME} ${OBJ_FILES}
 %.o: %.c
-		${CC} ${CFLAGS} -c $< -o $@
+		${CC} ${CFLAGS} $< -o $@
 clean: 
-		rm -f *.o
+		rm -f ${OBJ_FILES}
 fclean: clean
 		rm -f ${NAME}
 re: fclean all

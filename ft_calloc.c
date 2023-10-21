@@ -1,35 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahans <allan.hans68350@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/18 11:01:18 by ahans             #+#    #+#             */
-/*   Updated: 2023/10/21 17:21:28 by ahans            ###   ########.fr       */
+/*   Created: 2023/10/21 15:39:24 by ahans             #+#    #+#             */
+/*   Updated: 2023/10/21 16:39:53 by ahans            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+void	*ft_calloc(size_t elementCount, size_t elementSize)
 {
-	size_t	src_len;
+	size_t	total_size;
+	void	*ptr;
 
-	src_len = 0;
-	if (size == 0)
-	{
-		return (ft_strlen(src));
-	}
-	while (src_len < size - 1 && src[src_len] != '\0')
-	{
-		dst[src_len] = src[src_len];
-		src_len++;
-	}
-	dst[src_len] = '\0';
-	while (src[src_len] != '\0')
-	{
-		src_len++;
-	}
-	return (src_len);
+	total_size = elementCount * elementSize;
+	ptr = malloc(total_size);
+	if (ptr != NULL)
+		ft_memset(ptr, 0, total_size);
+	return (ptr);
 }

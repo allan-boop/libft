@@ -6,7 +6,7 @@
 /*   By: ahans <allan.hans68350@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 17:09:43 by ahans             #+#    #+#             */
-/*   Updated: 2023/10/20 16:14:08 by ahans            ###   ########.fr       */
+/*   Updated: 2023/10/21 17:06:58 by ahans            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,13 @@
 
 # include <stdio.h>
 # include <string.h>
-# include <stddef.h> 
+# include <stddef.h>
+# include <stdlib.h>
 
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strdup(const char *source);
+void	*ft_calloc(size_t elementCount, size_t elementSize);
+int		ft_atoi(const char *theString);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 int		ft_memcmp(const void *pointer1, const void *pointer2, size_t size);
 void	*ft_memchr(const void *memoryBlock, int searchedChar, size_t size);

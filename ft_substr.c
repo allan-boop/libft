@@ -1,35 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahans <allan.hans68350@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/18 11:01:18 by ahans             #+#    #+#             */
-/*   Updated: 2023/10/21 17:21:28 by ahans            ###   ########.fr       */
+/*   Created: 2023/10/21 17:05:15 by ahans             #+#    #+#             */
+/*   Updated: 2023/10/21 18:43:08 by ahans            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t	src_len;
+	size_t	i;
+	size_t	j;
+	char	*str;
 
-	src_len = 0;
-	if (size == 0)
+	str = (char*)malloc(sizeof(*s) * (len + 1));
+	if (!str)
+		return (NULL);
+	i = 0;
+	j = 0;
+	while (s[i])
 	{
-		return (ft_strlen(src));
+		if (i >= start && j < len)
+		{
+			str[j] = s[i];
+			j++;
+		}
+		i++;
 	}
-	while (src_len < size - 1 && src[src_len] != '\0')
-	{
-		dst[src_len] = src[src_len];
-		src_len++;
-	}
-	dst[src_len] = '\0';
-	while (src[src_len] != '\0')
-	{
-		src_len++;
-	}
-	return (src_len);
+	str[j] = 0;
+	return (str);
 }

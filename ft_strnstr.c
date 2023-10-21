@@ -6,7 +6,7 @@
 /*   By: ahans <allan.hans68350@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 16:12:56 by ahans             #+#    #+#             */
-/*   Updated: 2023/10/20 17:55:53 by ahans            ###   ########.fr       */
+/*   Updated: 2023/10/21 13:51:48 by ahans            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	i = 0;
 	to_find = (NULL);
 	if (big == NULL || len == 0)
-    	return NULL;
+		return (NULL);
 	if (*little == '\0')
-    	return (char *)big;
-	while (i < len )
+		return ((char *)big);
+	while (i < len)
 	{
 		if (big[i] == little[0])
 		{
