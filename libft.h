@@ -6,7 +6,7 @@
 /*   By: ahans <allan.hans68350@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 17:09:43 by ahans             #+#    #+#             */
-/*   Updated: 2023/10/21 17:06:58 by ahans            ###   ########.fr       */
+/*   Updated: 2023/10/22 14:14:00 by ahans            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <stddef.h>
 # include <stdlib.h>
 
+char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strdup(const char *source);
 void	*ft_calloc(size_t elementCount, size_t elementSize);
