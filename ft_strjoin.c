@@ -6,7 +6,7 @@
 /*   By: ahans <allan.hans68350@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 14:12:19 by ahans             #+#    #+#             */
-/*   Updated: 2023/10/22 17:25:58 by ahans            ###   ########.fr       */
+/*   Updated: 2023/10/23 11:14:18 by ahans            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,24 @@ char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*str;
 	size_t	i;
-	size_t	j;
+	size_t	all_size;
 
-	j = ft_strlen(s2);
-	i = ft_strlen(s1);
-	str = malloc(sizeof(char) * (i + j + 1));
-	if (str == NULL)
-		return (NULL);
-	ft_strlcpy(str, s1, i);
-	ft_strlcpy(str + i, s2, j);
-	str[i + j] = '\0';
+	if (!s1 || !s2)
+	{
+		if (s1)
+			return (ft_strdup(s1));
+		else if (s2)
+			return (ft_strdup(""));
+	}
+	all_size = ft_strlen(s2) + ft_strlen(s1);
+	str = (char *)malloc((all_size + 1) * sizeof(char));
+	if (!str)
+		return (str);
+	i = 0;
+	while (*s1)
+		str[i++] = *s1++;
+	while (*s2)
+		str[i++] = *s2++;
+	str[i] = '\0';
 	return (str);
 }

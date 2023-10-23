@@ -6,7 +6,7 @@
 /*   By: ahans <allan.hans68350@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 16:00:47 by ahans             #+#    #+#             */
-/*   Updated: 2023/10/21 16:36:28 by ahans            ###   ########.fr       */
+/*   Updated: 2023/10/23 11:17:13 by ahans            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 char	*ft_strdup(const char *source)
 {
-	size_t	source_len;
-	char	*duplicate;
+	size_t	i;
+	char	*new;
 
-	if (source == NULL)
+	i = 0;
+	new = (char *)malloc(sizeof(char) * ft_strlen(source) + 1);
+	if (!new)
 		return (NULL);
-	source_len = ft_strlen(source);
-	duplicate = (char *)malloc(source_len + 1);
-	if (duplicate == NULL)
-		return (NULL);
-	ft_strlcpy(duplicate, source, source_len + 1);
-	return (duplicate);
+	while (*source)
+		new[i++] = *source++;
+	new[i] = '\0';
+	return (new);
 }
