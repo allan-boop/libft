@@ -6,7 +6,7 @@
 /*   By: ahans <allan.hans68350@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 17:09:43 by ahans             #+#    #+#             */
-/*   Updated: 2023/10/22 14:14:00 by ahans            ###   ########.fr       */
+/*   Updated: 2023/10/23 13:06:00 by ahans            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 # include <stddef.h>
 # include <stdlib.h>
 
+char	**ft_split(char const *s, char c);
+char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strdup(const char *source);

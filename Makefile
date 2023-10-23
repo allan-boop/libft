@@ -8,7 +8,9 @@ CC			= gcc
 ########################################
 ## SOURCES
 
-SRC_FILES = ft_strjoin.c \
+SRC_FILES = ft_split.c \
+			ft_strtrim.c \
+			ft_strjoin.c \
 			ft_substr.c \
 			ft_strdup.c \
 			ft_calloc.c \
@@ -34,7 +36,9 @@ SRC_FILES = ft_strjoin.c \
 			ft_strrchr.c \
 			ft_strncmp.c
 
-OBJ_FILES = ft_strjoin.o \
+OBJ_FILES = ft_split.o \
+			ft_strtrim.o \
+			ft_strjoin.o \
 			ft_substr.o \
 			ft_strdup.o \
 			ft_calloc.o \
