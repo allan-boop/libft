@@ -1,33 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahans <allan.hans68350@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/18 11:02:43 by ahans             #+#    #+#             */
-/*   Updated: 2023/10/24 11:13:48 by ahans            ###   ########.fr       */
+/*   Created: 2023/10/24 17:03:12 by ahans             #+#    #+#             */
+/*   Updated: 2023/10/24 17:29:34 by ahans            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *destination, const void *source, size_t size)
+void	ft_putstr_fd(char *s, int fd)
 {
-	char		*dest;
-	const char	*src;
-	size_t		i;
+	size_t	i;
 
-	if (destination == NULL && source == NULL)
-		return (NULL);
-	dest = (char *)destination;
-	src = (const char *)source;
 	i = 0;
-	while (size)
+	while (s[i])
 	{
-		dest[i] = src[i];
-		size--;
+		write(fd, &s[i], 1);
 		i++;
 	}
-	return (destination);
 }

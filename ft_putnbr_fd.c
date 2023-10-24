@@ -1,33 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahans <allan.hans68350@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/18 11:02:43 by ahans             #+#    #+#             */
-/*   Updated: 2023/10/24 11:13:48 by ahans            ###   ########.fr       */
+/*   Created: 2023/10/24 17:44:19 by ahans             #+#    #+#             */
+/*   Updated: 2023/10/24 18:26:32 by ahans            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *destination, const void *source, size_t size)
+static unsigned int	ft_module_fd(int n)
 {
-	char		*dest;
-	const char	*src;
-	size_t		i;
+	if (n < 0)
+		return (n * (-1));
+	else
+		return (n);
+}
 
-	if (destination == NULL && source == NULL)
-		return (NULL);
-	dest = (char *)destination;
-	src = (const char *)source;
-	i = 0;
-	while (size)
+void	ft_putnbr_fd(int n, int fd)
+{
+	unsigned int	num;
+
+	if (n < 0)
+		ft_putchar_fd('-', fd);
+	num = ft_module_fd(n);
+	if (num >= 10)
 	{
-		dest[i] = src[i];
-		size--;
-		i++;
+		ft_putnbr_fd(num / 10, fd);
+		ft_putnbr_fd(num % 10, fd);
 	}
-	return (destination);
+	else
+		ft_putchar_fd(num + '0', fd);
 }

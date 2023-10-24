@@ -2,13 +2,20 @@
 ## ARGUMENTS
 
 NAME		= libft.a
-CFLAGS		= -Wextra -Wall -Werror -c 
+CFLAGS		= -Wextra -Wall -Werror -c
 CC			= gcc
 
 ########################################
 ## SOURCES
 
-SRC_FILES = ft_split.c \
+SRC_FILES =	ft_putnbr_fd.c \
+			ft_putendl_fd.c \
+			ft_putstr_fd.c \
+			ft_putchar_fd.c \
+			ft_striteri.c \
+			ft_strmapi.c \
+			ft_itoa.c \
+			ft_split.c \
 			ft_strtrim.c \
 			ft_strjoin.c \
 			ft_substr.c \
@@ -36,7 +43,14 @@ SRC_FILES = ft_split.c \
 			ft_strrchr.c \
 			ft_strncmp.c
 
-OBJ_FILES = ft_split.o \
+OBJ_FILES = ft_putnbr_fd.o \
+			ft_putendl_fd.o \
+			ft_putstr_fd.o \
+			ft_putchar_fd.o \
+			ft_striteri.o \
+			ft_strmapi.o \
+			ft_itoa.o \
+			ft_split.o \
 			ft_strtrim.o \
 			ft_strjoin.o \
 			ft_substr.o \
