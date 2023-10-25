@@ -6,23 +6,13 @@
 /*   By: ahans <allan.hans68350@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 11:03:23 by ahans             #+#    #+#             */
-/*   Updated: 2023/10/18 17:59:17 by ahans            ###   ########.fr       */
+/*   Updated: 2023/10/25 11:41:50 by ahans            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 int	main(void)
-{/*
-	char	zero[5];
-	int		i;
-
-	i = 0;
-	ft_bzero(zero, 5);
-	while (i < 5)
-	{
-		printf("%s ", zero[i]);
-		i++;
-	}
-	return (0);*/
+{
+	ft_split("^1^2a,^3^--h^", '^');
 }

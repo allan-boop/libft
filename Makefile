@@ -43,7 +43,7 @@ SRC_FILES =	ft_putnbr_fd.c \
 			ft_strrchr.c \
 			ft_strncmp.c
 
-OBJ_FILES = ft_putnbr_fd.o \
+OBJ_FILES =	ft_putnbr_fd.o \
 			ft_putendl_fd.o \
 			ft_putstr_fd.o \
 			ft_putchar_fd.o \
