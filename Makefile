@@ -43,40 +43,11 @@ SRC_FILES =	ft_putnbr_fd.c \
 			ft_strrchr.c \
 			ft_strncmp.c
 
-OBJ_FILES =	ft_putnbr_fd.o \
-			ft_putendl_fd.o \
-			ft_putstr_fd.o \
-			ft_putchar_fd.o \
-			ft_striteri.o \
-			ft_strmapi.o \
-			ft_itoa.o \
-			ft_split.o \
-			ft_strtrim.o \
-			ft_strjoin.o \
-			ft_substr.o \
-			ft_strdup.o \
-			ft_calloc.o \
-			ft_atoi.o \
-			ft_strnstr.o \
-			ft_memcmp.o \
-			ft_memchr.o \
-			ft_bzero.o \
-			ft_isalnum.o \
-			ft_isalpha.o \
-			ft_isascii.o \
-			ft_isdigit.o \
-			ft_isprint.o \
-			ft_memcpy.o \
-			ft_memmove.o \
-			ft_memset.o \
-			ft_strlen.o \
-			ft_strlcpy.o \
-			ft_strlcat.o \
-			ft_toupper.o \
-			ft_tolower.o \
-			ft_strchr.o \
-			ft_strrchr.o \
-			ft_strncmp.o
+OBJ_FILES =	$(SRC_FILES:.c=.o)
+
+BONUS			=	ft_lstnew.c
+
+BONUS_OBJS		= $(BONUS:.c=.o)
 
 ########################################
 ## RULES
@@ -85,12 +56,13 @@ all: ${NAME}
 
 ${NAME}: ${OBJ_FILES}
 			${AR} rcs ${NAME} ${OBJ_FILES}
-%.o: %.c
-		${CC} ${CFLAGS} $< -o $@
 clean: 
-		rm -f ${OBJ_FILES}
+		rm -f ${OBJ_FILES} ${BONUS_OBJS}
 fclean: clean
 		rm -f ${NAME}
 re: fclean all
 
-.PHONY: all clean fclean re
+bonus: $(OBJ_FILES) $(BONUS_OBJS)
+		${AR} rcs $(NAME) $(OBJ_FILES) $(BONUS_OBJS)
+
+.PHONY: all clean fclean re bonus

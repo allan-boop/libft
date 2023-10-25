@@ -6,7 +6,7 @@
 /*   By: ahans <allan.hans68350@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 17:32:31 by ahans             #+#    #+#             */
-/*   Updated: 2023/10/24 17:43:13 by ahans            ###   ########.fr       */
+/*   Updated: 2023/10/25 18:24:12 by ahans            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,9 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	size_t	i;
-
-	i = 0;
-	while (s[i])
-	{
-		write(fd, &s[i], 1);
-		i++;
-	}
+	if (!s)
+		return ;
+	write (fd, s, ft_strlen(s));
 	write(fd, "\n", 1);
+	return ;
 }
