@@ -45,7 +45,15 @@ SRC_FILES =	ft_putnbr_fd.c \
 
 OBJ_FILES =	$(SRC_FILES:.c=.o)
 
-BONUS			=	ft_lstnew.c
+BONUS			=	ft_lstmap.c \
+					ft_lstiter.c \
+					ft_lstclear.c \
+					ft_lstdelone.c \
+					ft_lstadd_back.c \
+					ft_lstlast.c \
+					ft_lstsize.c \
+					ft_lstadd_front.c \
+					ft_lstnew.c
 
 BONUS_OBJS		= $(BONUS:.c=.o)
 
