@@ -6,7 +6,7 @@
 /*   By: ahans <allan.hans68350@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 16:22:03 by ahans             #+#    #+#             */
-/*   Updated: 2023/10/24 16:41:08 by ahans            ###   ########.fr       */
+/*   Updated: 2023/10/27 15:26:38 by ahans            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char			*s_f;
 	unsigned int	i;
 
+	if (!s)
+		return (NULL);
 	i = 0;
 	s_f = malloc(sizeof(char) * ft_strlen(s) + 1);
 	if (!s_f)
