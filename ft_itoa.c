@@ -6,7 +6,7 @@
 /*   By: ahans <allan.hans68350@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 11:14:53 by ahans             #+#    #+#             */
-/*   Updated: 2023/10/24 15:40:18 by ahans            ###   ########.fr       */
+/*   Updated: 2023/10/30 13:49:03 by ahans            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static int	count_size(int n)
 	return (i);
 }
 
-char	*ft_strnew(size_t size)
+static	char	*ft_strnew(size_t size)
 {
 	char	*str;
 
