@@ -6,7 +6,7 @@
 /*   By: ahans <allan.hans68350@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 11:14:53 by ahans             #+#    #+#             */
-/*   Updated: 2023/10/30 13:49:03 by ahans            ###   ########.fr       */
+/*   Updated: 2023/10/30 14:31:32 by ahans            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static int	count_size(int n)
 	return (i);
 }
 
-static	char	*ft_strnew(size_t size)
+static	char	*strnew(size_t size)
 {
 	char	*str;
 
@@ -50,7 +50,7 @@ char	*ft_itoa(int num)
 	i = 0;
 	if (n < 0 || count == 0)
 		count++;
-	dst = ft_strnew(count);
+	dst = strnew(count);
 	if (!dst)
 		return (NULL);
 	if (n < 0)

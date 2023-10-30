@@ -6,13 +6,13 @@
 /*   By: ahans <allan.hans68350@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 17:44:19 by ahans             #+#    #+#             */
-/*   Updated: 2023/10/25 18:24:29 by ahans            ###   ########.fr       */
+/*   Updated: 2023/10/30 15:17:50 by ahans            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static unsigned int	ft_module_fd(int n)
+static unsigned int	module_fd(int n)
 {
 	if (n < 0)
 		return (n * (-1));
@@ -26,7 +26,7 @@ void	ft_putnbr_fd(int n, int fd)
 
 	if (n < 0)
 		ft_putchar_fd('-', fd);
-	num = ft_module_fd(n);
+	num = module_fd(n);
 	if (num >= 10)
 	{
 		ft_putnbr_fd(num / 10, fd);

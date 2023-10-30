@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahans <allan.hans68350@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static int	ft_getstart(const char *s1, const char *set)
+static int	getstart(const char *s1, const char *set)
 {
 	size_t	len;
 	size_t	i;
@@ -28,7 +28,7 @@ static int	ft_getstart(const char *s1, const char *set)
 	return (i);
 }
 
-static int	ft_getend(const char *s1, const char *set)
+static int	getend(const char *s1, const char *set)
 {
 	size_t	len;
 	size_t	i;
@@ -54,8 +54,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (NULL);
 	if (set == NULL)
 		return (ft_strdup(s1));
-	start = ft_getstart(s1, set);
-	end = ft_getend(s1, set);
+	start = getstart(s1, set);
+	end = getend(s1, set);
 	if (start >= end)
 		return (ft_strdup(""));
 	newstr = (char *)malloc(sizeof(char) * (end - start + 1));
