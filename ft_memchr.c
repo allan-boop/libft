@@ -6,22 +6,22 @@
 /*   By: ahans <allan.hans68350@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 14:19:13 by ahans             #+#    #+#             */
-/*   Updated: 2023/10/20 14:54:42 by ahans            ###   ########.fr       */
+/*   Updated: 2023/10/30 12:05:28 by ahans            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *memoryBlock, int searchedChar, size_t size)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
 	const unsigned char	*src;
 	unsigned char		target;
 	size_t				i;
 
 	i = 0;
-	src = memoryBlock;
-	target = (unsigned char)searchedChar;
-	while (i < size)
+	src = s;
+	target = (unsigned char)c;
+	while (i < n)
 	{
 		if (src[i] == target)
 		{

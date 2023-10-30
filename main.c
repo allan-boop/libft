@@ -6,13 +6,17 @@
 /*   By: ahans <allan.hans68350@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 11:03:23 by ahans             #+#    #+#             */
-/*   Updated: 2023/10/25 17:34:46 by ahans            ###   ########.fr       */
+/*   Updated: 2023/10/30 10:54:07 by ahans            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
+#include <stddef.h>
+#include <stdio.h>
 
 int	main(void)
 {
-	ft_putstr_fd(NULL, 1);
+	int test = ft_atoi(NULL);
+	printf("%d", test);
 }
